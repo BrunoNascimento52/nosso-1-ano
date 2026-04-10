@@ -648,11 +648,6 @@
 <body>
 <div id="progress-bar"><div id="progress-fill"></div></div>
 
-<!-- BOTÕES DE TESTE -->
-<div id="skip-bar" style="position:fixed; bottom:calc(var(--sab) + 80px); left:50%; transform:translateX(-50%); width:100%; max-width:480px; display:flex; justify-content:flex-end; gap:8px; padding:0 16px; z-index:999; pointer-events:none">
-  <button onclick="testBack()" style="pointer-events:all; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); color:white; border:none; border-radius:50px; padding:8px 14px; font-size:12px; font-family:'DM Sans',sans-serif; cursor:pointer; opacity:0.7">← Teste</button>
-  <button onclick="testNext()" style="pointer-events:all; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); color:white; border:none; border-radius:50px; padding:8px 14px; font-size:12px; font-family:'DM Sans',sans-serif; cursor:pointer; opacity:0.7">Teste →</button>
-</div>
 
 <div id="app">
 
@@ -2673,16 +2668,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // TESTE — navegação livre sem restrições
-function testNext() {
-  const idx = screenOrder.indexOf(currentScreen);
-  const next = screenOrder[idx + 1];
-  if (next) goTo(next);
-}
-function testBack() {
-  const idx = screenOrder.indexOf(currentScreen);
-  const prev = screenOrder[idx - 1];
-  if (prev) goTo(prev);
-}
 </script>
 </body>
 </html>
